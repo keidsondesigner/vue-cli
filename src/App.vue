@@ -1,14 +1,19 @@
 <template>
   <div id="app">
-    <TesteComponent msg="Olá mundo" />
+    <nav>
+      <!-- navegação entrega páginas -->
+      <router-link to="/">Home</router-link>
+      <router-link to="/cursos">Cursos</router-link>
+    </nav>
+    <!-- <HomePage /> -->
+    <!-- <TesteComponent msg="Olá mundo" /> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 
-export default {
-  components: {},
-};
+export default {};
 </script>
 
 <style lang="scss">
