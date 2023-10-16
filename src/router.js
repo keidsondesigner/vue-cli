@@ -3,6 +3,8 @@ import VueRouter from 'vue-router';
 
 import HomePage from './views/HomePage.vue';
 import CursosPage from './views/CursosPage.vue';
+import AcoesPage from './views/AcoesPage.vue';
+import AcoesDadosPage from './views/AcoesDadosPage.vue';
 
 Vue.use(VueRouter);
 
@@ -16,6 +18,18 @@ const routes = [
     path: '/cursos',
     name: 'cursos',
     component: CursosPage,
+  },
+  {
+    path: '/acoes',
+    name: 'acoes',
+    component: AcoesPage,
+    children: [
+      {
+        path: ':simbolo',
+        component: AcoesDadosPage,
+        props: true,
+      },
+    ],
   },
 ];
 
